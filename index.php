@@ -99,7 +99,7 @@ include(ROOT_PATH . '/inc/header.php'); ?>
 				
 				<?php if (isset($_GET["status"]) AND $_GET["status"] == "sent") { ?>
 					<h3 class="ctr">Thank you for your submission!</h3>
-					<p class="ctr"><img src="<?php echo BASE_URL; ?>/smcdsm_icon-logo.jpg"></p>
+					<p class="ctr"><img src="<?php echo BASE_URL; ?>smcdsm_icon-logo.jpg"></p>
 				<?php } else { ?>
 				
 				<form method="POST" action="<?php echo BASE_URL; ?>" class="" role="form">
@@ -405,7 +405,10 @@ include(ROOT_PATH . '/inc/header.php'); ?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script>
-	  
+	  $('#myTab a').click(function (e) {
+	    e.preventDefault()
+	    $(this).tab('show')
+	  })
 	</script>
 	<script src="scripts.js" type="text/javascript"></script>
 </body>
