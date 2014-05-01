@@ -100,7 +100,7 @@ include('inc/header.php'); ?>
 					<p class="ctr"><img src="/smcdsm_icon-logo.jpg"></p>
 				<?php } else { ?>
 				
-				<form method="POST" action="/" class="" role="form">
+				<form method="POST" action="" class="" role="form">
 				
 					<!-- Nav tabs -->
 					<ul id="myTab" class="nav nav-tabs">
