@@ -1,0 +1,41 @@
+body {
+	padding-bottom: 50px;
+}
+
+.ctr {
+	text-align: center;
+}
+
+.tab-pane .row {
+	margin-top: 15px;
+}
+
+.tab-pane .row:first-of-type {
+	margin-top: 0;
+}
+
+textarea {
+	min-height: 150px;
+}
+
+a#AddMoreFileBox,
+.screenshot_url a {
+	vertical-align: -webkit-baseline-middle;
+	font-size: 24px;
+}
+
+a#AddMoreFileBox {
+	color: #00dd00;
+}
+
+a#AddMoreFileBox {
+	color: #00ff00;
+}
+
+.screenshot_url a {
+	color: #dd0000;
+}
+
+.screenshot a:hover {
+	color: #aa0000;
+}
