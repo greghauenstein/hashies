@@ -1,7 +1,5 @@
 <?php
 
-require_once('inc/config.php');
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$firstname = trim($_POST["firstname"]);
 	$lastname = trim($_POST["lastname"]);
@@ -39,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 	}
 	
-	require_once(ROOT_PATH . 'inc/phpmailer/class.phpmailer.php');
+	require_once('inc/phpmailer/class.phpmailer.php');
 	$mail = new PHPMailer();
 	
 	if (!isset($error_message) && !$mail->ValidateAddress($email)){
@@ -81,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mail->MsgHTML($email_body);
 			
 		if($mail->Send()) {
-			header("Location: " . BASE_URL . "?status=sent");
+			header("Location: /status=sent");
 			exit;
 		} else {
 		  $error_message = 'There was a problem submitting your application: ' . $mail->ErrorInfo;
@@ -91,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <?php 
-include(ROOT_PATH . '/inc/header.php'); ?>
+include('inc/header.php'); ?>
 	
 	<div class="container">
 		<div class="row">
@@ -99,10 +97,10 @@ include(ROOT_PATH . '/inc/header.php'); ?>
 				
 				<?php if (isset($_GET["status"]) AND $_GET["status"] == "sent") { ?>
 					<h3 class="ctr">Thank you for your submission!</h3>
-					<p class="ctr"><img src="<?php echo BASE_URL; ?>smcdsm_icon-logo.jpg"></p>
+					<p class="ctr"><img src="/smcdsm_icon-logo.jpg"></p>
 				<?php } else { ?>
 				
-				<form method="POST" action="<?php echo BASE_URL; ?>" class="" role="form">
+				<form method="POST" action="/" class="" role="form">
 				
 					<!-- Nav tabs -->
 					<ul id="myTab" class="nav nav-tabs">

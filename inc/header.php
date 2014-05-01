@@ -20,7 +20,7 @@
 		        <span class="sr-only">Toggle navigation</span>
 		        Menu
 		      </button>
-		      <a class="navbar-brand" href="<?php echo BASE_URL; ?>">2014 Hashie Awards</a>
+		      <a class="navbar-brand" href="/">2014 Hashie Awards</a>
 		    </div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
