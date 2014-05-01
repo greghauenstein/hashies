@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mail->MsgHTML($email_body);
 			
 		if($mail->Send()) {
-			header("Location: /status=sent");
+			header("Location: ?status=sent");
 			exit;
 		} else {
 		  $error_message = 'There was a problem submitting your application: ' . $mail->ErrorInfo;
